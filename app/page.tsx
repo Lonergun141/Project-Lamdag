@@ -1,6 +1,6 @@
 import FeaturedRecipe from '@/components/ui/featuredRecipe';
+import CategoryCarousel from '@/components/ui/categoryCarousel';
 import Link from 'next/link';
-
 
 export default function Home() {
 	return (
@@ -92,58 +92,107 @@ export default function Home() {
 				</div>
 			</section>
 
-			<div className="relative px-6 py-2 overflow-hidden">
-				<div className="relative space-y-6 mb-8">
-					<div className="overflow-hidden">
-						<h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-[color:var(--primary)] font-bold font-[family-name:var(--font-pd)] leading-none">
-							<span
-								className="inline-block transform translate-y-full animate-slide-up"
-								style={{ animationDelay: '0.2s' }}>
-								Featured
-							</span>
-							<br />
-							<span
-								className="inline-block transform translate-y-full animate-slide-up bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 bg-clip-text text-transparent"
-								style={{ animationDelay: '0.4s' }}>
-								Recipes
-							</span>
-						</h1>
+			<div className="relative px-6 py-16 overflow-hidden">
+				<div className="max-w-6xl mx-auto text-center">
+					<div className="relative space-y-8 mb-12">
+						<div
+							className="flex items-center justify-center space-x-4 opacity-0 animate-fade-in-up"
+							style={{ animationDelay: '0.4s' }}>
+							<div className="w-16 h-px bg-gradient-to-r from-transparent via-[color:var(--primary)]/60 to-[color:var(--primary)]"></div>
+							<div className="w-3 h-3 bg-[color:var(--primary)] rounded-full animate-pulse"></div>
+							<div className="w-16 h-px bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--primary)]/60 to-transparent"></div>
+						</div>
 					</div>
 
-					<div
-						className="flex items-center space-x-4 opacity-0 animate-fade-in-right"
-						style={{ animationDelay: '0.6s' }}>
-						<div className="w-16 h-px bg-gradient-to-r from-transparent to-orange-400"></div>
-						<div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-						<div className="w-32 h-px bg-gradient-to-r from-orange-400 to-transparent"></div>
-					</div>
-				</div>
+					<div className="relative max-w-4xl mx-auto">
+						<h2
+							className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[color:var(--foreground)]/80 font-light font-[family-name:var(--font-pd)] leading-relaxed opacity-0 animate-fade-in-up"
+							style={{ animationDelay: '0.6s' }}>
+							Handpicked
+							<span className="font-medium text-[color:var(--foreground)] relative mx-2">
+								culinary masterpieces
+							</span>
+						</h2>
 
-				<div className="relative max-w-4xl">
-					<h2
-						className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[color:var(--foreground)]/80 font-light font-[family-name:var(--font-pd)] leading-relaxed opacity-0 animate-fade-in-up"
-						style={{ animationDelay: '0.8s' }}>
-						Handpicked
-						<span className="font-medium text-[color:var(--foreground)] relative">
-							{' '}
-							culinary masterpieces
-							<svg
-								className="absolute -bottom-2 left-0 w-full h-3 text-amber-400/30"
-								viewBox="0 0 300 12"
-								fill="none">
-								<path
-									d="M5 6C50 2, 100 10, 150 6C200 2, 250 10, 295 6"
-									stroke="currentColor"
-									strokeWidth="2"
-									strokeLinecap="round"
-									className="animate-draw-line"
-								/>
-							</svg>
-						</span>
-					</h2>
+						<p
+							className="mt-8 text-lg md:text-xl text-[color:var(--foreground)]/60 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up"
+							style={{ animationDelay: '1s' }}>
+							Discover our featured recipes, curated to inspire your next culinary adventure
+						</p>
+					</div>
+
+					<div className="absolute inset-0 pointer-events-none">
+						<div
+							className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-[color:var(--primary)]/5 to-transparent rounded-full animate-pulse"
+							style={{ animationDelay: '1.2s', animationDuration: '4s' }}></div>
+
+						<div
+							className="absolute top-20 left-10 w-2 h-2 bg-[color:var(--primary)]/30 rounded-full animate-float"
+							style={{ animationDelay: '2s' }}></div>
+						<div
+							className="absolute top-32 right-16 w-1 h-1 bg-[color:var(--primary)]/20 rounded-full animate-float"
+							style={{ animationDelay: '2.5s' }}></div>
+						<div
+							className="absolute bottom-20 left-20 w-1.5 h-1.5 bg-[color:var(--primary)]/25 rounded-full animate-float"
+							style={{ animationDelay: '3s' }}></div>
+						<div
+							className="absolute bottom-32 right-10 w-2 h-2 bg-[color:var(--primary)]/20 rounded-full animate-float"
+							style={{ animationDelay: '1.8s' }}></div>
+					</div>
 				</div>
 			</div>
 			<FeaturedRecipe />
+			<div className="relative px-6 py-16 overflow-hidden">
+				<div className="max-w-6xl mx-auto text-center">
+					<div className="relative space-y-8 mb-12">
+						<div
+							className="flex items-center justify-center space-x-4 opacity-0 animate-fade-in-up"
+							style={{ animationDelay: '0.4s' }}>
+							<div className="w-16 h-px bg-gradient-to-r from-transparent via-[color:var(--primary)]/60 to-[color:var(--primary)]"></div>
+							<div className="w-3 h-3 bg-[color:var(--primary)] rounded-full animate-pulse"></div>
+							<div className="w-16 h-px bg-gradient-to-r from-[color:var(--primary)] via-[color:var(--primary)]/60 to-transparent"></div>
+						</div>
+					</div>
+
+					<div className="relative max-w-4xl mx-auto">
+						<h2
+							className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[color:var(--foreground)]/80 font-light font-[family-name:var(--font-pd)] leading-relaxed opacity-0 animate-fade-in-up"
+							style={{ animationDelay: '0.6s' }}>
+							Explore cuisines
+							<span className="font-medium text-[color:var(--foreground)] relative mx-2">
+								from around the world
+							</span>
+						</h2>
+
+						<p
+							className="mt-8 text-lg md:text-xl text-[color:var(--foreground)]/60 max-w-2xl mx-auto leading-relaxed opacity-0 animate-fade-in-up"
+							style={{ animationDelay: '1s' }}>
+							Discover authentic flavors and traditional recipes that tell the story of
+							cultures across the globe
+						</p>
+					</div>
+
+					<div className="absolute inset-0 pointer-events-none">
+						<div
+							className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-[color:var(--primary)]/5 to-transparent rounded-full animate-pulse"
+							style={{ animationDelay: '1.2s', animationDuration: '4s' }}></div>
+
+						<div
+							className="absolute top-20 left-10 w-2 h-2 bg-[color:var(--primary)]/30 rounded-full animate-float"
+							style={{ animationDelay: '2s' }}></div>
+						<div
+							className="absolute top-32 right-16 w-1 h-1 bg-[color:var(--primary)]/20 rounded-full animate-float"
+							style={{ animationDelay: '2.5s' }}></div>
+						<div
+							className="absolute bottom-20 left-20 w-1.5 h-1.5 bg-[color:var(--primary)]/25 rounded-full animate-float"
+							style={{ animationDelay: '3s' }}></div>
+						<div
+							className="absolute bottom-32 right-10 w-2 h-2 bg-[color:var(--primary)]/20 rounded-full animate-float"
+							style={{ animationDelay: '1.8s' }}></div>
+					</div>
+				</div>
+			</div>
+			<CategoryCarousel />
 		</main>
 	);
 }
