@@ -32,3 +32,55 @@ body {
 .menu-link {
 	transform-origin: center;
 }
+
+@keyframes slide-up {
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade-in-up {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes draw-line {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}
+
+.animate-slide-up {
+	animation: slide-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+	animation: fade-in-up 0.8s ease-out forwards;
+	transform: translateY(30px);
+}
+
+.animate-draw-line {
+	stroke-dasharray: 300;
+	stroke-dashoffset: 300;
+	animation: draw-line 1.5s ease-out forwards;
+}
+
+.animate-float {
+	animation: float 3s ease-in-out infinite;
+}
+
+.bg-gradient-radial {
+	background: radial-gradient(circle, var(--tw-gradient-stops));
+}
