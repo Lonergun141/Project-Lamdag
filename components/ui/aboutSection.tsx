@@ -141,7 +141,7 @@ const LearnMoreSection = () => {
 						Experience the Power of TheMealDB
 					</h3>
 					<p className="text-gray-600 mb-8 max-w-2xl mx-auto font-[family-name:var(--font-crimson)]">
-						Built on TheMealDB's robust API, our platform delivers consistent, high-quality recipe data with reliable performance. 
+						Built on TheMealDB&apos;s robust API, our platform delivers consistent, high-quality recipe data with reliable performance. 
 						Start exploring authentic recipes from around the world with structured ingredients and clear instructions.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
