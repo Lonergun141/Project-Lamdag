@@ -1,5 +1,6 @@
 import FeaturedRecipe from '@/components/ui/featuredRecipe';
-import CategoryCarousel from '@/components/ui/categoryCarousel';
+import CategoryCarousel from '@/components/ui/categoryCarousel'
+import LearnMoreSection from '@/components/ui/aboutSection';
 import Link from 'next/link';
 
 export default function Home() {
@@ -200,6 +201,8 @@ export default function Home() {
 				</div>
 			</div>
 			<CategoryCarousel />
+
+			<LearnMoreSection/>
 		</main>
 	);
 }
