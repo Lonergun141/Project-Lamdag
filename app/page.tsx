@@ -142,6 +142,13 @@ export default function Home() {
 				</div>
 			</div>
 			<FeaturedRecipe />
+			<div>
+				<h3 className='text-center text-2xl font-[family-name:var(--font-pd)] text-[color:var(--primary)] mb-6 cursor-pointer hover:underline transition-all ease-in-out duration-75'>
+					View More{' '}
+					<Link
+						href="/recipes"></Link>
+				</h3>
+			</div>
 			<div className="relative px-6 py-16 overflow-hidden">
 				<div className="max-w-6xl mx-auto text-center">
 					<div className="relative space-y-8 mb-12">
