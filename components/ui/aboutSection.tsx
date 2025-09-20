@@ -11,7 +11,7 @@ const FeatureCard = ({
 	onHover, 
 	onLeave 
 }: {
-	icon: any;
+	icon: React.ComponentType<{ className?: string }>;
 	title: string;
 	description: string;
 	isHovered: boolean;
@@ -101,7 +101,7 @@ const LearnMoreSection = () => {
 	return (
 		<section className="py-16 bg-gray-50" aria-label="Learn More About Our Platform">
 			<div className="max-w-7xl mx-auto px-4">
-
+		
 				<header className="text-center mb-16">
 					<h2 className="text-4xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-pd)]">
 						Powered by TheMealDB API
@@ -111,6 +111,7 @@ const LearnMoreSection = () => {
 					</p>
 				</header>
 
+		
 				<div className="bg-white border border-gray-200 p-8 mb-16">
 					<div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 						{stats.map((stat, index) => (
@@ -119,7 +120,7 @@ const LearnMoreSection = () => {
 					</div>
 				</div>
 
-	
+				
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
 					{features.map((feature) => (
 						<FeatureCard
@@ -134,7 +135,7 @@ const LearnMoreSection = () => {
 					))}
 				</div>
 
-
+		
 				<div className="bg-white border border-gray-200 p-12 text-center">
 					<h3 className="text-2xl font-bold text-gray-900 mb-4 font-[family-name:var(--font-pd)]">
 						Experience the Power of TheMealDB
@@ -158,7 +159,7 @@ const LearnMoreSection = () => {
 					</div>
 				</div>
 
-
+	
 				<div className="mt-16 grid md:grid-cols-2 gap-12">
 					<div>
 						<h4 className="text-xl font-semibold text-gray-900 mb-4 font-[family-name:var(--font-pd)]">
