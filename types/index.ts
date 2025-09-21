@@ -31,3 +31,27 @@ export interface MenuItem {
   items?: MenuItem[];
 }
 
+
+export interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+  startIndex: number;
+  endIndex: number;
+  totalItems: number;
+}
+
+export interface Filters {
+  category: string;
+  area: string;
+  ingredient: string;
+}
+
+export interface FilterParams {
+  search?: string;
+  category?: string;
+  area?: string;
+  ingredient?: string;
+}

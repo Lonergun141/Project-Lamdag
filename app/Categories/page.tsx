@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, Search, AlertCircle } from 'lucide-react';
+import {  AlertCircle } from 'lucide-react';
 import { useCarousel } from '@/hooks/useCarousel';
 import CategoryCard from '@/components/ui/categoryCard';
 import SearchBar from '@/components/ui/serachBar';
