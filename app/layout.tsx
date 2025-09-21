@@ -3,6 +3,7 @@ import { Pacifico, Crimson_Text, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Logo from '@/components/header';
 import FloatingActions from '@/components/ui/floatingActions';
+import Footer from '@/components/footer';
 
 const pacifico = Pacifico({
 	subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({
 			<body className={`${pacifico.variable} ${crimson.variable} ${pd.variable} antialiased`}>
 				<Logo /> <FloatingActions />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);

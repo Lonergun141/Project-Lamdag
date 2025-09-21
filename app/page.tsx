@@ -2,7 +2,7 @@ import FeaturedRecipe from '@/components/ui/featuredRecipe';
 import CategoryCarousel from '@/components/ui/categoryCarousel'
 import LearnMoreSection from '@/components/ui/aboutSection';
 import Link from 'next/link';
-import Footer from '@/components/footer';
+
 
 export default function Home() {
 	return (
@@ -204,7 +204,7 @@ export default function Home() {
 			<CategoryCarousel />
 
 			<LearnMoreSection/>
-			<Footer/>
+			
 		</main>
 	);
 }

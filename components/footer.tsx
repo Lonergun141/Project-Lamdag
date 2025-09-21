@@ -50,19 +50,6 @@ const Footer = () => {
 
 	return (
 		<>
-			<style jsx global>{`
-				@keyframes scroll {
-					0% {
-						transform: translateX(0);
-					}
-					100% {
-						transform: translateX(-50%);
-					}
-				}
-				.animate-scroll {
-					animation: scroll 30s linear infinite;
-				}
-			`}</style>
 
 			<footer className="bg-[color:var(--primary)]">
 				<NewsTicker />
@@ -85,13 +72,13 @@ const Footer = () => {
 
 								<div className="space-y-4">
 									<div>
-										<SocietyLink href="/recipes">Recipes</SocietyLink>
+										<SocietyLink href="/Recipes">Recipes</SocietyLink>
 									</div>
 									<div>
-										<SocietyLink href="/categories">Categories</SocietyLink>
+										<SocietyLink href="/Categories">Categories</SocietyLink>
 									</div>
 									<div>
-										<SocietyLink href="/about">About</SocietyLink>
+										<SocietyLink href="/About">About</SocietyLink>
 									</div>
 								</div>
 							</div>
