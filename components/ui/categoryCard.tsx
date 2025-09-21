@@ -1,14 +1,11 @@
 'use client';
 
-import { useState } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight, AlertCircle } from 'lucide-react';
-import { useCarousel } from '@/hooks/useCarousel';
+import { ArrowRight } from 'lucide-react';
 import type { Categories } from '@/types/recipes';
-import { truncateText, getProgressIndex, CAROUSEL_CONFIG } from '@/utils/carousel';
+import { truncateText, CAROUSEL_CONFIG } from '@/utils/carousel';
 
 const CategoryCard = ({
 	category,
-	isHovered,
 	onHover,
 	onLeave,
 }: {
