@@ -10,19 +10,27 @@ export interface Recipe {
 	[key: string]: any;
 }
 
+export interface FilterOptions {
+	categories: string[];
+	areas: string[];
+	ingredients: string[];
+}
+
 export interface Categories {
 	idCategory: string;
 	strCategory: string;
-  strCategoryThumb: string
+	strCategoryThumb: string;
 	strCategoryDescription: string;
 }
 
 export interface UseCarouselReturn {
-  categories: Categories[];
-  duplicatedCategories: Categories[];
-  currentIndex: number;
-  isLoading: boolean;
-  error: string | null;
-  nextSlide: () => void;
-  goToSlide: (index: number) => void;
+	categories: Categories[];
+	duplicatedCategories: Categories[];
+	currentIndex: number;
+	isLoading: boolean;
+	error: string | null;
+	nextSlide: () => void;
+	goToSlide: (index: number) => void;
 }
+
+export type FilterKey = 'category' | 'area' | 'ingredient' | 'clear';

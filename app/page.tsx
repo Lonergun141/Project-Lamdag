@@ -2,7 +2,7 @@ import FeaturedRecipe from '@/components/ui/featuredRecipe';
 import CategoryCarousel from '@/components/ui/categoryCarousel'
 import LearnMoreSection from '@/components/ui/aboutSection';
 import Link from 'next/link';
-import Footer from '@/components/footer';
+
 
 export default function Home() {
 	return (
@@ -61,7 +61,7 @@ export default function Home() {
 
 						<div className="opacity-0 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
 							<Link
-								href="/recipes"
+								href="/Recipes"
 								className="group relative inline-flex items-center px-12 py-6 text-xl font-medium text-white transition-all duration-500 overflow-hidden rounded-full border-2 border-white/30 hover:border-[#ff7736] backdrop-blur-sm bg-white/10 hover:bg-[#ff7736]/20">
 								<span className="absolute inset-0 bg-gradient-to-r from-[#ff7736]/20 to-[#ff7736]/30 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
 								<span className="absolute inset-0 bg-[#ff7736]/5 scale-0 group-hover:scale-100 transition-transform duration-700 rounded-full"></span>
@@ -204,7 +204,7 @@ export default function Home() {
 			<CategoryCarousel />
 
 			<LearnMoreSection/>
-			<Footer/>
+			
 		</main>
 	);
 }

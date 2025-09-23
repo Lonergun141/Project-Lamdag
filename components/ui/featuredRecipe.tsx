@@ -9,24 +9,25 @@ import Link from 'next/link';
 const FeaturedRecipe = () => {
 	const [recipes, setRecipes] = useState<Recipe[]>([]);
 
-	useEffect(() => {}, []);
-
 	useEffect(() => {
 		const getRecipes = async () => {
 			const data = await fetchRandomRecipe();
 			if (data) {
-				setRecipes(data);
+				const uniqueRecipes = data.filter((recipe, index, self) => 
+					index === self.findIndex(r => r.idMeal === recipe.idMeal)
+				);
+				setRecipes(uniqueRecipes);
 			}
 		};
 		getRecipes();
 	}, []);
 
 	return (
-		<section className="py-8  ">
+		<section className="py-8">
 			<div>
-				{recipes.map((recipe) => (
+				{recipes.map((recipe, index) => (
 					<div
-						key={recipe.idMeal}
+						key={`${recipe.idMeal}-${index}`} 
 						className="bg-white border border-gray-200 overflow-hidden group hover:shadow-xl transition-shadow duration-300">
 						<div className="flex flex-col lg:flex-row">
 							<div className="lg:w-1/2 aspect-[4/3] lg:aspect-auto overflow-hidden">
@@ -61,8 +62,8 @@ const FeaturedRecipe = () => {
 
 								<div className="flex justify-end">
 									<Link
-										href={`/recipe/${recipe.idMeal}`}
-										className="text-[color:var(--primary)] font-[family-name:var(--font-pd)]  text-sm hover:text-orange-600 transition-colors duration-200 inline-flex items-center group/link">
+										href={`/Recipe/${recipe.idMeal}`}
+										className="text-[color:var(--primary)] font-[family-name:var(--font-pd)] text-sm hover:text-orange-600 transition-colors duration-200 inline-flex items-center group/link">
 										View Meal
 										<svg
 											className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform duration-200"
