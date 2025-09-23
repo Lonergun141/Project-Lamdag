@@ -62,7 +62,7 @@ const FeaturedRecipe = () => {
 
 								<div className="flex justify-end">
 									<Link
-										href={`/recipe/${recipe.idMeal}`}
+										href={`/Recipe/${recipe.idMeal}`}
 										className="text-[color:var(--primary)] font-[family-name:var(--font-pd)] text-sm hover:text-orange-600 transition-colors duration-200 inline-flex items-center group/link">
 										View Meal
 										<svg

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import type { Recipe } from '@/types/recipes';
 import { getMealThumbnail } from '@/api/recipeServices';
+import Link from 'next/link';
 import React from 'react';
 
 const RecipeCard = ({ recipe }: { recipe: Recipe }) => {
@@ -41,16 +42,18 @@ const RecipeCard = ({ recipe }: { recipe: Recipe }) => {
 				<h3 className="font-[family-name:var(--font-crimson)] text-xl text-gray-900 mb-3 group-hover:text-[color:var(--primary)] transition-colors duration-300 leading-tight">
 					{recipe.strMeal}
 				</h3>
-
-				<p className="text-gray-600 text-sm leading-relaxed mb-4 font-[family-name:var(--font-crimson)] line-clamp-3">
-					{recipe.strInstructions
-						? `${recipe.strInstructions.slice(0, 120)}...`
-						: 'Delicious recipe with amazing flavors and simple cooking techniques.'}
-				</p>
-
-				<button className="w-full bg-gray-50 hover:bg-[color:var(--primary)] text-gray-700 hover:text-white py-3 text-sm font-medium font-[family-name:var(--font-crimson)] transition-all duration-300 transform group-hover:translate-y-0 translate-y-1">
-					View Recipe
-				</button>
+				<Link href={`/Recipe/${recipe.idMeal}`}>
+					<p className="text-gray-600 text-sm leading-relaxed mb-4 font-[family-name:var(--font-crimson)] line-clamp-3">
+						{recipe.strInstructions
+							? `${recipe.strInstructions.slice(0, 120)}...`
+							: 'Delicious recipe with amazing flavors and simple cooking techniques.'}
+					</p>
+				</Link>
+				<Link href={`/Recipe/${recipe.idMeal}`}>
+					<button className="w-full cursor-pointer bg-gray-50 hover:bg-[color:var(--primary)] text-gray-700 hover:text-white py-3 text-sm font-medium font-[family-name:var(--font-crimson)] transition-all duration-300 transform group-hover:translate-y-0 translate-y-1">
+						View Recipe
+					</button>
+				</Link>
 			</div>
 
 			<div className="absolute top-0 left-0 w-0 h-0 border-l-[20px] border-l-[color:var(--primary)] border-b-[20px] border-b-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
